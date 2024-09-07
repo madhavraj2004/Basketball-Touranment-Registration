@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5x5 Mixed Basketball Bonanza 2.0</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="header">
+    <h1>5x5 Mixed Basketball Bonanza 2.0</h1>
+  </header>
+
+  <section class="hero-section">
+    <img src="images/bonanza-banner.jpg" alt="5x5 Mixed Basketball Bonanza 2.0" class="hero-image">
+    <div class="hero-text">
+      <h2>Get Ready for the Ultimate Basketball Battle</h2>
+      <p>Dr. B.C. Roy Engineering College proudly presents the second edition of Bonanza.</p>
+      <a href="#register" class="btn btn-animate">Register Now</a>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="about-content">
+      <h2>About Bonanza: Season 2</h2>
+      <p>
+        Bonanza: Season 2 is the second edition of the most anticipated basketball tournament at Dr. B.C. Roy Engineering College. This season promises to be bigger and better with more teams, intense competition, and thrilling matches. Open to students from all courses and years, this tournament provides a platform for athletes to showcase their skills and passion for basketball. Don’t miss your chance to be part of the action!
+      </p>
+      <img src="images/court-action.jpg" alt="Basketball Court Action" class="about-image">
+    </div>
+  </section>
+
+  <section id="perks" class="perks-section">
+    <h2>Perks of Playing in the Tournament</h2>
+    <ul class="perks-list">
+      <li>Chance to win exciting prizes and trophies</li>
+      <li>Opportunity to showcase your skills to scouts and coaches</li>
+      <li>Networking opportunities with fellow basketball enthusiasts</li>
+      <li>Free tournament merchandise and goodies</li>
+      <li>Participation certificates for all players</li>
+    </ul>
+  </section>
+
+  <section id="register" class="registration-section">
+    <h2>Event Registration</h2>
+    <form action="#" method="POST" class="registration-form">
+      <label for="timestamp">Timestamp:</label>
+      <input type="text" id="timestamp" name="timestamp" disabled value="">
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="course">Course:</label>
+      <input type="text" id="course" name="course" required>
+
+      <label for="year">Year of Studying:</label>
+      <input type="text" id="year" name="year" required>
+
+      <label for="roll-number">College/University Roll Number:</label>
+      <input type="text" id="roll-number" name="roll-number" required>
+
+      <label for="email">Email ID:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="player-type">Identify as a Basketball Player:</label>
+      <select id="player-type" name="player-type" required>
+        <option value="">--Select--</option>
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+      </select>
+
+      <label for="rating">Rate Yourself (1-5 Stars):</label>
+      <input type="range" id="rating" name="rating" min="1" max="5" step="1" oninput="updateRating(this.value)">
+      <span id="rating-value">3</span> Stars
+
+      <button type="submit" class="submit-btn">Submit Registration</button>
+    </form>
+  </section>
+
+  <section id="certificates" class="certificates-section">
+    <h2>Certificates</h2>
+    <p>All participants will receive a participation certificate upon completion of the tournament. Ensure that your details are filled out correctly in the registration form to receive your certificate.</p>
+  </section>
+
+  <section id="gallery" class="gallery-section">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="images/player1.jpg" alt="Player Action" class="gallery-image">
+      <img src="images/player2.jpg" alt="Basketball Dunk" class="gallery-image">
+      <img src="images/player3.jpg" alt="Team Huddle" class="gallery-image">
+      <img src="images/player4.jpg" alt="Victory Pose" class="gallery-image">
+      <img src="images/player5.jpg" alt="Game Strategy" class="gallery-image">
+      <img src="images/player6.jpg" alt="Basketball Training" class="gallery-image">
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Contact Details</h2>
+    <p>For any inquiries or further information, please contact:</p>
+    <p><strong>Madhav Raj</strong></p>
+    <p>Phone Number: <a href="tel:+917070679606">7070679606</a></p>
+  </section>
+
+  <footer>
+    <p>© 2024 MadhavRaj. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script>
+    function updateRating(value) {
+      document.getElementById('rating-value').innerText = value;
+    }
+  </script>
+</body>
+
+</html>
