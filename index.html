@@ -47,7 +47,7 @@
 
   <section id="register" class="registration-section">
     <h2>Event Registration</h2>
-    <form action="#" method="POST" class="registration-form">
+    <form id="registration-form">
       <label for="timestamp">Timestamp:</label>
       <input type="text" id="timestamp" name="timestamp" disabled value="">
 
@@ -60,8 +60,8 @@
       <label for="year">Year of Studying (1/2/3/4th Year):</label>
       <input type="text" id="year" name="year" required>
 
-      <label for="roll-number">College/University Roll Number:</label>
-      <input type="text" id="roll-number" name="roll-number" required>
+      <label for="roll-number">College Roll Number:</label>
+      <input type="text" id="roll-number" name="roll_number" required>
 
       <label for="email">Email ID:</label>
       <input type="email" id="email" name="email" required>
@@ -70,7 +70,7 @@
       <input type="tel" id="phone" name="phone" required>
 
       <label for="player-type">Identify as a Basketball Player:</label>
-      <select id="player-type" name="player-type" required>
+      <select id="player-type" name="player_type" required>
         <option value="">--Select--</option>
         <option value="Beginner">Beginner</option>
         <option value="Intermediate">Intermediate</option>
@@ -118,7 +118,20 @@
     function updateRating(value) {
       document.getElementById('rating-value').innerText = value;
     }
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx0f-iHElnmfwoI1b6YZsyje4hg9t4uLl4DGgI0V62K/exec';
+    const form = document.getElementById('registration-form');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault(); // Prevent default form submission behavior
+
+      // Fetch the form data and send it to Google Apps Script
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => alert('Registration successful!')) // Success message
+        .catch(error => console.error('Error!', error.message));
+    });
   </script>
+
 </body>
 
 </html>
